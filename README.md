@@ -18,6 +18,6 @@ The bulk of the algorithm is dedicated to calculating a series of points along t
 
 ![SlidingBoxes](https://user-images.githubusercontent.com/52022661/211681820-6d40ec76-7926-42a6-b941-00ecffa3e286.png)
 
-* Reverse the perspective transform on the points and connect the points with line segments.
+* Reverse the perspective transform on the points and connect them with line segments.
 
 ![FinalResult](https://user-images.githubusercontent.com/52022661/211682068-d3262190-7236-48c6-8281-27bc0e980d54.png)
