@@ -14,5 +14,10 @@ The bulk of the algorithm is dedicated to calculating a series of points along t
 
 ![Bird'sEyeView](https://user-images.githubusercontent.com/52022661/211678227-459b13f8-6c9d-49b7-aa02-e616983e782d.png)
 
-* A series of search boxes scanning from bottom to top average the positions of white pixels to form a point on the overlayed line. 
-In order to determine where the points should go, a series of search boxes are used in which regions of the image are examined for white pixels. For all the white pixels that exist within a search box, their positions are first added up and then divided by the total white pixel count in order to obtain the average white pixel position. This average position will then be classified as a point that exists on one of the lane lines.
+* Using a series of search boxes scanning from bottom to top, average the positions of white pixels within a search box to form a point on the overlayed line. When placing a search box, offset it using the distance between the previous search box's center and it's average white pixel point. This ensures that the search boxes follow the curvature of the lane lines.
+
+![SlidingBoxes](https://user-images.githubusercontent.com/52022661/211681820-6d40ec76-7926-42a6-b941-00ecffa3e286.png)
+
+* Reverse the perspective transform on the points and connect the points with line segments.
+
+![FinalResult](https://user-images.githubusercontent.com/52022661/211682068-d3262190-7236-48c6-8281-27bc0e980d54.png)
